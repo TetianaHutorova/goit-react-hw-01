@@ -1,7 +1,9 @@
+import clsx from "clsx";
+import css from "../TransactionHistory/TransactionHistory.module.css";
 export default function TransactionHistory({ items }) {
   return (
-    <table>
-      <thead>
+    <table className={css.table}>
+      <thead className={css.tableHead}>
         <tr>
           <th>Type</th>
           <th>Amount</th>
@@ -10,9 +12,11 @@ export default function TransactionHistory({ items }) {
       </thead>
 
       <tbody>
-        {items.map(({ id, type, amount, currency }) => (
-          <tr key={id}>
-            <td>{type[0].toUpperCase()+type.slice(1)}</td>
+        {items.map(({ id, type, amount, currency }, ind) => (
+          <tr key={id} className={clsx(ind % 2 === 0 ? "" : css.gray)}>
+            <td className={css.type}>
+              {type[0].toUpperCase() + type.slice(1)}
+            </td>
             <td>{amount}</td>
             <td>{currency}</td>
           </tr>
