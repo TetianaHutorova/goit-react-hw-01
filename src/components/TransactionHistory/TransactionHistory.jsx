@@ -25,8 +25,4 @@ export default function TransactionHistory({ items }) {
     </table>
   );
 }
-
-// id: "63ca02f9-d637-46b5-9237-f3b24425e029",
-// type: "payment",
-// amount: "862.44",
-// currency: "AUD",
+ 

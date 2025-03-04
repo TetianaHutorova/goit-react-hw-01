@@ -6,7 +6,7 @@
   padding: 0px;
   gap: 10px;
   overflow-x: auto;
-}
+} 
 
 .list li {
   flex: 1;
